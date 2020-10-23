@@ -1,3 +1,39 @@
 .Weather {
-  border: 1px solid grey;
+  padding: 20px;
+  display: block;
+}
+.weather-title {
+  color: #6230b3;
+}
+
+.form {
+  padding: 10px;
+}
+
+.navbar {
+  background-color: #ccffd2 !important;
+  padding: 50px;
+}
+.navbar-brand {
+  color: #6230b3 !important;
+  text-emphasis: bold !important;
+}
+
+.form-control {
+  background-color: #ccffd2;
+  color: #6230b3;
+  border: 1px solid #6230b3;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.btn {
+  color: #6230b3;
+  border-color: #6230b3;
+  border-radius: 0%;
+  margin: 0 auto;
+}
+
+.Weather li {
+  color: #6230b3;
 }

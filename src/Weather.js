@@ -3,12 +3,18 @@ import './Weather.css';
 
 export default function Weather (){
     return(
+        
     <div className="Weather">
-        <form>
-            <input type="search" placeholder="Enter a city" className = "form-control"/>
-            <input type ="submit" value="Search" className="btn btn-primary"/>
-        </form>
-     <h1>New York</h1>
+       
+       <nav className="navbar navbar-light bg-light justify-content-between">
+  <a className="navbar-brand">React Weather</a>
+  <form className="form-inline">
+    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+     <h1 className = "weather-title">New York</h1>
      <ul>
          <li>Wednesday 07:00</li>
          <li>Mostly Cloudy</li>
