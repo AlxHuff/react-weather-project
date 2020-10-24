@@ -1,9 +1,27 @@
 .App {
-  background-color: #ccffd2;
-  border: 10px solid #6230b3;
+  background-image: linear-gradient(
+    to bottom,
+    #f78ca0 0%,
+    #da7368 35%,
+    #c8685f 65%,
+    #6b2224 100%
+  );
+  border: 8px solid black;
   padding: 50px;
 }
 
 .App footer {
-  color: #6230b3;
+  color: black;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.music {
+  display: block;
+}
+
+.git-link {
+  text-decoration: underline;
+  color: black;
 }
