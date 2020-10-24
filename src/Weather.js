@@ -20,7 +20,7 @@ export default function Weather (){
      <h1 className = "weather-title">New York</h1>
     
      <ul>
-         <li>Wednesday 07:00</li>
+         <li>Wednesday 07:00,</li>
          <li>Mostly Cloudy</li>
      </ul>
     
