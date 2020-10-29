@@ -17,23 +17,34 @@ export default function Weather (){
 <div className="row"><iframe className="music" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 <div className="weather-card-main">
 
-     <h1 className = "weather-title">New York</h1>
+     <h1 className = "weather-title"><strong>New York</strong></h1>
     
-     <ul>
-         <li>Wednesday 07:00,</li>
-         <li>Mostly Cloudy</li>
+     <ul id="date-description">
+         <em> 
+        <li>Wednesday 07:00,</li>
+        <li> Mostly Cloudy</li>
+        </em>
      </ul>
     
     <div className ="row">
+
             <div className="col-6">
-             <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"alt="mostly cloudy"/>
+                <div className="clearfix">
+             <img className="float-left" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"alt="mostly cloudy"/>
+             <div className = "float-right">
+             <h1 id="main-temp">90° <span>C | F</span></h1>
+             </div>
+             </div>
             </div>
-             <div className="col-6">
-                 <ul>
-                 <li>Percipitation: 15%</li>
-                 <li>Humidity: 72%</li>
-                 <li>Wind: 13 km/hr</li>
-             </ul>
+
+            <div className="col-6">
+                <strong>
+                <ul id ="weather-list">
+                 <li>Percipitation: 15%</li><br/>
+                 <li>Humidity: 72%</li><br/>
+                 <li>Wind: 13 km/hr</li><br/>
+                 </ul>
+                </strong>
             </div>
     </div>
 
