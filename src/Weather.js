@@ -22,17 +22,16 @@ export default function Weather (){
      <ul id="date-description">
          <em> 
         <li>Wednesday 07:00,</li>
-        <li> Mostly Cloudy</li>
+        <li> Mostly cloudy</li>
         </em>
      </ul>
     
     <div className ="row">
-
             <div className="col-6">
                 <div className="clearfix">
              <img className="float-left" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"alt="mostly cloudy"/>
              <div className = "float-right">
-             <h1 id="main-temp">90° <span>C | F</span></h1>
+             <h1 id="main-temp">90° <span id="celsius">C | F</span></h1>
              </div>
              </div>
             </div>
