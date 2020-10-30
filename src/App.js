@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       
-    <Weather/>
+    <Weather defaultCity="Nashville"/>
    
      <footer>
        This project was coded by Alex Huffman and is open-sourced on <space/>
