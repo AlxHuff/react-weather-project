@@ -4,15 +4,24 @@ import axios from "axios";
 
 export default function Weather (){
 
-    const[temperature, setTemperature]=useState(null);
+   
     const[ready, setReady]=useState(false);
+    const[weatherData, setWeatherData]= useState({});
     
     function handleResponse(response){
-     console.log(response.data);
-     setTemperature(response.data.main.temp);
-     setReady(true);}
+   
+     setWeatherData({
+        ready: true,
+        temperature:response.data.main.temp, 
+        wind:response.data.wind.speed, 
+        city:response.data.name,
+        humidity: response.data.main.humidity,
+        description:response.data.weather[0].description,
+        iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+        date:"Wednesday 07:00" });}
+    
 
-if(ready){
+if(weatherData.ready){
    
     return(
         
@@ -29,21 +38,21 @@ if(ready){
     <div className="row"><iframe className="music" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     <div className="weather-card-main">
     
-         <h1 className = "weather-title"><strong>New York</strong></h1>
+         <h1 className = "weather-title"><strong>{weatherData.city}</strong></h1>
         
          <ul id="date-description">
              <em> 
-            <li>Wednesday 07:00,</li>
-            <li> Mostly cloudy</li>
+            <li>{weatherData.date},</li>
+            <li className="text-capitalize"> {weatherData.description}</li>
             </em>
          </ul>
         
         <div className ="row">
                 <div className="col-6">
                     <div className="clearfix">
-                 <img className="float-left" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"alt="mostly cloudy"/>
+                 <img className="float-left" src={weatherData.iconUrl} alt={weatherData.description}/>
                  <div className = "float-right">
-                 <h1 id="main-temp">90° <span id="celsius">C | F</span></h1>
+                 <h1 id="main-temp">{Math.round(weatherData.temperature)}° <span id="celsius">C | F</span></h1>
                  </div>
                  </div>
                 </div>
@@ -52,8 +61,8 @@ if(ready){
                     <strong>
                     <ul id ="weather-list">
                      <li>Percipitation: 15%</li><br/>
-                     <li>Humidity: 72%</li><br/>
-                     <li>Wind: 13 km/hr</li><br/>
+                     <li>Humidity: {weatherData.humidity}%</li><br/>
+                     <li>Wind: {weatherData.wind} km/hr</li><br/>
                      </ul>
                     </strong>
                 </div>
