@@ -9,13 +9,12 @@
   font-size: 30px;
 }
 
-.weather-card-main {
+div.weather-card-main {
   border: 1px solid black;
-  padding: 20px;
+  padding: 50px;
   background-color: rgba(246, 220, 212, 0.2);
-  max-width: 500px;
-  max-height: 350px;
-  min-width: 500px;
+  width: 500px;
+  height: 350px;
   margin: 0 auto;
   display: block;
 }
@@ -30,6 +29,7 @@
   padding: 10px;
   padding-bottom: 20px;
 }
+
 .navbar-brand {
   color: black !important;
   font-family: "Quicksand", sans-serif;
@@ -76,7 +76,7 @@ ul {
 
 .music {
   max-width: 500;
-  max-height: 350;
+  max-height: 350px;
   margin: 0 auto;
   display: block;
   border: 1px solid black;
@@ -85,6 +85,8 @@ ul {
 .row {
   padding: 10px;
   margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 div.col-6 {

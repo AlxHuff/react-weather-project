@@ -36,9 +36,8 @@ if(weatherData.ready){
       </form>
     </nav>
     
-    <div className="row"><iframe className="music" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <div className="row">
     <div className="weather-card-main">
-    
          <h1 className = "weather-title"><strong>{weatherData.city}</strong></h1>
         
          <ul id="date-description">
@@ -70,8 +69,9 @@ if(weatherData.ready){
                     </strong>
                 </div>
         </div>
-    
+   
     </div>
+    <iframe className="music" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     
         
