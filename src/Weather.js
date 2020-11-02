@@ -5,7 +5,8 @@ import WeatherInfo from "./WeatherInfo.js";
 
 export default function Weather (props){
     
-    const[weatherData, setWeatherData]= useState({});
+    const[city, setCity]=useState(props.defaultCity);
+    const[weatherData, setWeatherData]= useState({ready:false});
     
     function handleResponse(response){
    
@@ -21,7 +22,17 @@ export default function Weather (props){
 
 function handleSubmit(event){
     event.preventDefault();
-    
+    search(city);
+}
+
+function handleCityChange(event){
+setCity(event.target.value);
+}
+
+function search(){
+    const apiKey="36616c1d79a2b7725ac3053f800c78b3";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse); 
 }
 
 if(weatherData.ready){
@@ -33,7 +44,7 @@ if(weatherData.ready){
     <nav className="navbar navbar-light bg-light justify-content-between">
       <a className="navbar-brand">Golden Hour Weather</a>
       <form className="form-inline" onSubmit={handleSubmit}>
-        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={handleCityChange}/>
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
@@ -47,10 +58,7 @@ if(weatherData.ready){
     } 
     
     else {  
-    const apiKey="36616c1d79a2b7725ac3053f800c78b3";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse); 
-    
+    search();
     return "Loading..."; }
 
 } 
