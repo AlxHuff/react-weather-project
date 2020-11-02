@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
-import FormattedDate from "./FormattedDate.js";
 import './Weather.css';
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo.js";
 
 export default function Weather (props){
-
-   
-    const[ready, setReady]=useState(false);
+    
     const[weatherData, setWeatherData]= useState({});
     
     function handleResponse(response){
@@ -20,7 +18,11 @@ export default function Weather (props){
         description:response.data.weather[0].description,
         iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
         date: new Date (response.data.dt * 1000) });}
+
+function handleSubmit(event){
+    event.preventDefault();
     
+}
 
 if(weatherData.ready){
    
@@ -30,52 +32,18 @@ if(weatherData.ready){
            
     <nav className="navbar navbar-light bg-light justify-content-between">
       <a className="navbar-brand">Golden Hour Weather</a>
-      <form className="form-inline">
+      <form className="form-inline" onSubmit={handleSubmit}>
         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
-    
+ 
     <div className="row">
-    <div className="weather-card-main">
-         <h1 className = "weather-title"><strong>{weatherData.city}</strong></h1>
-        
-         <ul id="date-description">
-           <em> 
-            <li>
-                <FormattedDate date={weatherData.date}/>
-            </li>
-            <li className="text-capitalize"> {weatherData.description}</li>
-           </em>
-         </ul>
-        
-        <div className ="row">
-                <div className="col-6">
-                    <div className="clearfix">
-                 <img className="float-left" src={weatherData.iconUrl} alt={weatherData.description}/>
-                 <div className = "float-right">
-                 <h1 id="main-temp">{Math.round(weatherData.temperature)}° <span id="celsius">C | F</span></h1>
-                 </div>
-                 </div>
-                </div>
-    
-                <div className="col-6">
-                    <strong>
-                    <ul id ="weather-list">
-                     <li>Percipitation: 15%</li><br/>
-                     <li>Humidity: {weatherData.humidity}%</li><br/>
-                     <li>Wind: {Math.round(weatherData.wind)} km/hr</li><br/>
-                    </ul>
-                    </strong>
-                </div>
-        </div>
-   
-    </div>
+    <WeatherInfo data = {weatherData}/>
     <iframe className="music" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     
-        
-        </div>);
+         </div>);
     } 
     
     else {  
