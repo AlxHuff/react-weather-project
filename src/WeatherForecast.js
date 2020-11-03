@@ -23,10 +23,9 @@ if(loaded) {
       <div className="forecastCard">
      <div className= "row" id="time"><strong>10:00</strong></div>
      <br/>
-     <div className="clearfix" id="forecast-temp">
-       <WeatherIcon code={forecast.list[0].weather[0].icon}/>
-       <strong>{Math.round(forecast.list[0].main.temp)}°</strong>
-     </div>
+     <WeatherIcon classname="icon" code={forecast.list[0].weather[0].icon}/>
+    <strong id="forecast-temp">{Math.round(forecast.list[0].main.temp)}°C</strong>
+    
        
       </div>
         
