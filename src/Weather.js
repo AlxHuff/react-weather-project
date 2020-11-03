@@ -55,7 +55,7 @@ if(weatherData.ready){
  
     <div className="row">
     <WeatherInfo data = {weatherData}/>
-    <iframe title="music" className="my-music"  rel="noopener noreferrer" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe title="music" id="my-music"  rel="noopener noreferrer" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
  <br/>
     <WeatherForecast city={weatherData.city}/>  

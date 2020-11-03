@@ -17,15 +17,20 @@ const [forecast, setForecast]=useState(null);
 if(loaded && props.city === forecast.city.name) {
   return (
   
-  <div className="WeatherForecast row">
+  <div id="WeatherForecast" className="row">
+      <div className= "row" id="row-a">
           <WeatherForecastPreview data={forecast.list[0]}/>
           <WeatherForecastPreview data={forecast.list[1]}/>
           <WeatherForecastPreview data={forecast.list[2]}/>
           <WeatherForecastPreview data={forecast.list[3]}/>
+      </div>
+      <div className= "row" id="row-b"> 
           <WeatherForecastPreview data={forecast.list[4]}/>
           <WeatherForecastPreview data={forecast.list[5]}/>
           <WeatherForecastPreview data={forecast.list[6]}/>
           <WeatherForecastPreview data={forecast.list[7]}/>
+      </div>      
+         
   </div>
   );
 } 

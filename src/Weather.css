@@ -37,6 +37,8 @@ a:hover {
   margin: 0 auto;
   padding: 5px;
   padding-bottom: 20px;
+  padding-left: 65px;
+  padding-right: 65px;
 }
 
 .navbar-brand {
@@ -92,8 +94,8 @@ ul {
   margin: 0 auto;
 }
 
-.music {
-  width: 600px;
+#my-music {
+  min-width: 600px;
   height: 350px;
   margin: 0 auto;
   display: block;

@@ -26,8 +26,15 @@ div.forecastCard {
   padding-top: 15px;
 }
 
-.WeatherForecast canvas {
+#WeatherForecast canvas {
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+#WeatherForecast.row {
+  padding-left: 27px;
+  padding-right: 27px;
+  margin: 0 auto;
+  display: block;
 }
