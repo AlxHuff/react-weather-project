@@ -22,6 +22,7 @@ if(loaded && props.city === forecast.city.name) {
           <WeatherForecastPreview data={forecast.list[1]}/>
           <WeatherForecastPreview data={forecast.list[2]}/>
           <WeatherForecastPreview data={forecast.list[3]}/>
+          <br/>
           <WeatherForecastPreview data={forecast.list[4]}/>
           <WeatherForecastPreview data={forecast.list[5]}/>
           <WeatherForecastPreview data={forecast.list[6]}/>
