@@ -11,7 +11,7 @@
 
 div.weather-card-main {
   border: 1px solid black;
-  padding: 50px;
+  padding: 40px;
   background-color: rgba(246, 220, 212, 0.2);
   width: 500px;
   height: 350px;
@@ -19,6 +19,15 @@ div.weather-card-main {
   display: block;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #01c5c4;
+  text-decoration: none;
+}
 .form {
   padding: 10px;
 }
@@ -26,7 +35,7 @@ div.weather-card-main {
 .navbar {
   background-color: transparent !important;
   margin: 0 auto;
-  padding: 10px;
+  padding: 5px;
   padding-bottom: 20px;
 }
 
@@ -54,10 +63,19 @@ div.weather-card-main {
   margin: 0 auto;
 }
 
+.btn:hover {
+  color: white;
+  background-color: #01c5c4;
+  border-color: #01c5c4;
+  border-radius: 0%;
+  margin: 0 auto;
+}
+
 #date-description {
   margin: 0 auto;
   text-align: center;
   padding: 0;
+  padding-bottom: 30px;
 }
 
 ul {
@@ -75,20 +93,20 @@ ul {
 }
 
 .music {
-  max-width: 500;
-  max-height: 350px;
+  width: 600px;
+  height: 350px;
   margin: 0 auto;
   display: block;
   border: 1px solid black;
 }
 
 .row {
-  padding: 10px;
+  padding: 0px;
   margin: 0 auto;
 }
 
 div.col-6 {
-  padding: 10px;
+  padding: 0px;
   margin: 0 auto;
 }
 
@@ -111,6 +129,7 @@ div.col-6 {
   font-size: 50px;
   margin-bottom: 0px;
   color: black;
+  padding-right: 5px;
 }
 
 #celsius {

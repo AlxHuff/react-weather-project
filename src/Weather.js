@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Weather.css';
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 
 
@@ -56,6 +57,8 @@ if(weatherData.ready){
     <WeatherInfo data = {weatherData}/>
     <iframe className="music" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
+ <br/>
+    <WeatherForecast city={weatherData.city}/>  
     
          </div>);
     } 
