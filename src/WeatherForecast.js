@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./WeatherForecast.css";
+import WeatherForecastPreview from "./WeatherForecastPreview.js";
 import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 
@@ -19,16 +20,15 @@ const [forecast, setForecast]=useState(null);
 if(loaded) {
   return (
   
-  <div className="WeatherForecast">
-      <div className="forecastCard">
-     <div className= "row" id="time"><strong>10:00</strong></div>
-     <br/>
-     <WeatherIcon classname="icon" code={forecast.list[0].weather[0].icon}/>
-    <strong id="forecast-temp">{Math.round(forecast.list[0].main.temp)}°C</strong>
-    
-       
-      </div>
-        
+  <div className="WeatherForecast row">
+          <WeatherForecastPreview data={forecast.list[0]}/>
+          <WeatherForecastPreview data={forecast.list[1]}/>
+          <WeatherForecastPreview data={forecast.list[2]}/>
+          <WeatherForecastPreview data={forecast.list[3]}/>
+          <WeatherForecastPreview data={forecast.list[4]}/>
+          <WeatherForecastPreview data={forecast.list[5]}/>
+          <WeatherForecastPreview data={forecast.list[6]}/>
+          <WeatherForecastPreview data={forecast.list[7]}/>
   </div>
   );
 } 
