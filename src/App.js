@@ -12,7 +12,7 @@ function App() {
      <footer rel="noopener noreferrer" >
        This project was coded by Alex Huffman and is open-sourced on <space/>
        <a href="https://github.com/AlxHuff/react-weather-project" 
-       target="_blank" className="git-link">Github</a>
+       rel="noopener noreferrer" target="_blank" className="git-link">Github</a>
      </footer >
     </div>
   );

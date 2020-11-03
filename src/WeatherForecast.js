@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./WeatherForecast.css";
 import WeatherForecastPreview from "./WeatherForecastPreview.js";
-import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 
 
@@ -13,8 +12,6 @@ const [forecast, setForecast]=useState(null);
     function handleForecastResponse(response){
         setForecast(response.data);
         setLoaded(true);
-
-        console.log(response.data);
     }
     
 if(loaded && props.city === forecast.city.name) {

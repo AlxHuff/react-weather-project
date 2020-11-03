@@ -44,10 +44,10 @@ export default function WeatherTemperature(props){
                 <space/>
                 <space/>
                 <span className="unit" id="celsius">
-                    <a href = "/" onClick={convertToCelsius}>  °C</a></span>
+                    <a href = "/"  rel="noopener noreferrer" onClick={convertToCelsius}>  °C</a></span>
                 <span id="slash"> | </span>
                 <span className="unit" id="farenheit">
-                    <a href = "/" onClick={convertToFarenheit}>°F</a>
+                    <a href = "/" onClick={convertToFarenheit}  rel="noopener noreferrer">°F</a>
                 </span>
                 </h1>
             </div>
