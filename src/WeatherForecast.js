@@ -17,7 +17,7 @@ const [forecast, setForecast]=useState(null);
         console.log(response.data);
     }
     
-if(loaded) {
+if(loaded && props.city === forecast.city.name) {
   return (
   
   <div className="WeatherForecast row">
