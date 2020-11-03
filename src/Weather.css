@@ -108,13 +108,25 @@ div.col-6 {
 }
 
 #main-temp {
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 0px;
   color: black;
 }
 
 #celsius {
-  font-size: 15px;
+  font-size: 25px;
+  color: black;
+  vertical-align: super;
+}
+
+#farenheit {
+  font-size: 25px;
+  color: black;
+  vertical-align: super;
+}
+
+#slash {
+  font-size: 25px;
   color: black;
   vertical-align: super;
 }
