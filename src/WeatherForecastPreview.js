@@ -1,3 +1,4 @@
+import React from "react";
 import "./WeatherForecast.css";
 import WeatherIcon from "./WeatherIcon.js";
 
