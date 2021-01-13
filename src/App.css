@@ -1,17 +1,10 @@
 .App {
-  background-image: linear-gradient(
-    to bottom,
-    #f78ca0 0%,
-    #da7368 35%,
-    #c8685f 65%,
-    #6b2224 100%
-  );
-  border: 8px solid black;
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
   padding: 50px;
 }
 
 .App footer {
-  color: black;
+  color: white;
   display: block;
   margin: 0 auto;
   padding: 20px;
@@ -20,5 +13,5 @@
 
 .git-link {
   text-decoration: underline;
-  color: black;
+  color: white;
 }

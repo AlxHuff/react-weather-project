@@ -3,29 +3,31 @@
   display: block;
 }
 .weather-title {
-  color: black;
+  color: white;
   text-align: center;
   font-family: "Quicksand", sans-serif;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px0;
 }
 
 div.weather-card-main {
-  border: 1px solid black;
   padding: 40px;
-  background-color: rgba(246, 220, 212, 0.2);
+  background-color: rgba(243, 238, 236, 0.199);
   width: 500px;
-  height: 350px;
+  height: auto;
   margin: 0 auto;
   display: block;
+  border-radius: 15px;
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 a:hover {
-  color: #01c5c4;
+  color: #a1776c;
   text-decoration: none;
 }
 .form {
@@ -39,10 +41,11 @@ a:hover {
   padding-bottom: 20px;
   padding-left: 65px;
   padding-right: 65px;
+  margin-bottom: 20px;
 }
 
 .navbar-brand {
-  color: black !important;
+  color: white !important;
   font-family: "Quicksand", sans-serif;
   font-style: bold;
   font-size: 30px;
@@ -50,56 +53,49 @@ a:hover {
 
 .form-control {
   background-color: transparent;
-  color: black;
-  border: 1px solid black;
+  border: 1px solid white;
   max-width: 300px;
   margin: 0 auto;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .btn {
-  color: white;
-  background-color: black;
-  border-color: black;
-  border-radius: 0%;
+  color: #a1776c;
+  background-color: white;
+  border-color: white;
+  border-radius: 5px;
   margin: 0 auto;
 }
 
 .btn:hover {
   color: white;
-  background-color: #01c5c4;
-  border-color: #01c5c4;
-  border-radius: 0%;
+  background-color: rgba(243, 238, 236, 0.199);
+  border-color: white;
   margin: 0 auto;
 }
 
 #date-description {
   margin: 0 auto;
   text-align: center;
+  font-size: 16px;
+  font-weight: 400;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 ul {
   margin: 0 auto;
   padding: 0;
+  font-weight: 400;
 }
 
 .Weather li {
-  color: black;
+  color: white;
   text-decoration: none;
   list-style: none;
   display: inline;
   padding: 0px;
   margin: 0 auto;
-}
-
-#my-music {
-  min-width: 600px;
-  height: 350px;
-  margin: 0 auto;
-  display: block;
-  border: 1px solid black;
 }
 
 .row {
@@ -114,10 +110,11 @@ div.col-6 {
 
 #weather-list {
   text-align: left;
-  font-size: 15px;
+  font-size: 14px;
   padding: 0px;
   margin: 0 auto;
-  margin-left: 25px;
+  margin-left: 50px;
+  margin-top: 5px;
 }
 
 .Weather canvas {
@@ -130,24 +127,32 @@ div.col-6 {
 #main-temp {
   font-size: 50px;
   margin-bottom: 0px;
-  color: black;
+  color: white;
   padding-right: 5px;
+  margin-right: 10px;
 }
 
 #celsius {
-  font-size: 25px;
-  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
   vertical-align: super;
 }
 
 #farenheit {
-  font-size: 25px;
-  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
   vertical-align: super;
 }
 
 #slash {
-  font-size: 25px;
-  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
   vertical-align: super;
+}
+
+.Weather canvas {
+  margin-top: 5px;
 }

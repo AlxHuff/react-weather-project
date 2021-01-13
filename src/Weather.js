@@ -46,16 +46,15 @@ if(weatherData.ready){
         <div className="Weather">
            
     <nav className="navbar navbar-light bg-light justify-content-between">
-      <a  href= "https://www.kaceymusgraves.com/home" rel="noopener noreferrer" className="navbar-brand">Golden Hour Weather</a>
+      <h1 className="navbar-brand">Golden Hour Weather</h1>
       <form className="form-inline" onSubmit={handleSubmit}>
-        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={handleCityChange}/>
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input className="form-control mr-sm-2" type="search"  aria-label="Search" onChange={handleCityChange}/>
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search City</button>
       </form>
     </nav>
  
     <div className="row">
     <WeatherInfo data = {weatherData}/>
-    <iframe title="music" id="my-music"  rel="noopener noreferrer" src="https://open.spotify.com/embed/album/7f6xPqyaolTiziKf5R5Z0c" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
  <br/>
     <WeatherForecast city={weatherData.city}/>  
